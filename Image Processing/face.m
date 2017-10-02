@@ -1,0 +1,12 @@
+clear all; close all;
+clc;
+a = imread('me.jpg');
+a_gray = rgb2gray(a);
+bw_sobel = edge(a_gray, 'sobel');
+bw_prewitt = edge(a_gray, 'prewitt');
+bw_canny = edge(a_gray, 'canny', 0.08);
+figure , subplot(2, 3, 1), imshow(a), title('Original image');
+subplot(2, 3, 2), imshow(a_gray), title('Gray Scale');
+subplot(2, 3, 3), imshow(bw_sobel), title('Sobel');
+subplot(2, 3, 4), imshow(bw_prewitt), title('Prewitt');
+subplot(2, 3, 5), imshow(bw_canny), title('Canny');

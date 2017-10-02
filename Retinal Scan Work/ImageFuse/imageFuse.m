@@ -1,0 +1,10 @@
+A=imread('me1.jpg');
+B=imread('me2.jpg');
+C = imread('me3.jpg');
+imshow(A);
+hold on;
+h=imshow(B);
+set(h,'Alphadata',0.75);
+hold on;
+h=imshow(C);
+set(h,'Alphadata',0.5);
